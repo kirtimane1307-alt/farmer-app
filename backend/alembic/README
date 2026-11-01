@@ -1,0 +1,25 @@
+# Database Migrations (Alembic)
+
+This directory manages database schema migrations for PostgreSQL using Alembic.
+
+## Common Commands
+
+Run migrations up to current version:
+```bash
+alembic upgrade head
+```
+
+Roll back one migration step:
+```bash
+alembic downgrade -1
+```
+
+Generate new migration after updating SQLAlchemy models:
+```bash
+alembic revision --autogenerate -m "description_of_changes"
+```
+
+View migration history:
+```bash
+alembic history --verbose
+```
